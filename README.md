@@ -7,5 +7,5 @@ A very light-weight text editor with a lot of freedom. This basic text editor wo
 I was very bored and working on learning QT or QML integration with C++ apps, but instead I made this.
 
 ## Screenshots
-![Screenshot1](https://ibb.co/5R5jJrn)
-![Screenshot2](https://ibb.co/yPSj1hX)
+![Screenshot1](https://i.ibb.co/0Gf9zCF/screenshot1.png)
+![Screenshot2](https://i.ibb.co/KhwvkNX/screenshot2.png)
