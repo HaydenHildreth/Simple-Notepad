@@ -1,5 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QSettings>
+#include <QtCore>
+#include <QDebug>
+#include <QColor>
+#include <QTextEdit>
+#include <QStyle>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -7,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
-    setWindowTitle("SimpleText v0.1.0 | Programmed by: Hayden Hildreth");
+    setWindowTitle("SimpleText v0.1.4 | Programmed by: Hayden Hildreth");
 }
 
 MainWindow::~MainWindow()
@@ -32,7 +38,7 @@ void MainWindow::on_actionOpen_triggered()
         QMessageBox::warning(this, "Warning", "Unable to open file: " + file.errorString());
         return;
     }
-    setWindowTitle("SimpleText v0.1.0 | Programmed by: Hayden Hildreth | Open location: " + fileName);
+    setWindowTitle("SimpleText v0.1.4 | Programmed by: Hayden Hildreth | Open location: " + fileName);
     QTextStream in(&file);
     QString text = in.readAll();
     ui->textEdit->setText(text);
@@ -49,7 +55,7 @@ void MainWindow::on_actionSave_as_triggered()
         return;
     }
     currentFile = fileName;
-    setWindowTitle("SimpleText v0.1.0 | Programmed by: Hayden Hildreth | Open location: " + fileName);
+    setWindowTitle("SimpleText v0.1.4 | Programmed by: Hayden Hildreth | Open location: " + fileName);
     QTextStream out(&file);
     QString text = ui->textEdit->toPlainText();
     out << text;
@@ -98,4 +104,24 @@ void MainWindow::on_actionRedo_triggered()
 {
     ui->textEdit->redo();
 
+}
+
+void MainWindow::on_actionLight_triggered()
+{
+    qApp->setStyleSheet("QTextEdit { background-color: white; color: black; }");
+}
+
+void MainWindow::on_actionDark_triggered()
+{
+    qApp->setStyleSheet("QTextEdit { background-color: #A9A9A9; color: white; }");
+}
+
+void MainWindow::on_actionSalmon_triggered()
+{
+    qApp->setStyleSheet("QTextEdit { background-color: pink; color: white; }");
+}
+
+void MainWindow::on_actionHacker_triggered()
+{
+    qApp->setStyleSheet("QTextEdit { background-color: black; color: green; }");
 }
