@@ -1,6 +1,6 @@
 # SimpText (formerly SimpleText)
 ## What is SimpText? 
-Simp text is a very light-weight text editor that includes a lot of freedom. This basic text editor works most mainstream Operating Systems, include Windows, MacOS and Linux.
+SimpText is a very light-weight text editor that includes a lot of freedom. This basic text editor works most mainstream Operating Systems, include Windows, MacOS and Linux.
 ## How do I use SimpText
 To compile it you can either clone the repository and build it seperately on your machine via CLI or you can download from the Release page on the GitHub. If you are doing the latter please make sure that it is the latest version.
 ## More about this project
